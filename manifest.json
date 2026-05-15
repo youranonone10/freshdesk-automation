@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Freshdesk AI Resolution Assistant",
+  "version": "1.0.0",
+  "description": "Analyze Freshdesk tickets and suggest improved resolutions with knowledge base + Claude AI.",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": [
+    "https://*.freshdesk.com/*",
+    "https://api.anthropic.com/*"
+  ],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.freshdesk.com/*"],
+      "js": ["src/content.js"],
+      "css": ["src/styles.css"]
+    }
+  ],
+  "action": {
+    "default_popup": "src/popup.html",
+    "default_title": "Freshdesk AI Assistant"
+  },
+  "options_page": "src/options.html"
+}
