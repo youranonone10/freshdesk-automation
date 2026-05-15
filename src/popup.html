@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Freshdesk AI Assistant</title>
+    <style>
+      body { font-family: Arial, sans-serif; width: 320px; margin: 0; padding: 12px; color: #1f2937; }
+      h1 { font-size: 16px; margin: 0 0 8px; }
+      p { font-size: 12px; line-height: 1.4; }
+      .actions { display: flex; gap: 8px; margin-top: 10px; }
+      button { border: 1px solid #c9d1df; border-radius: 6px; padding: 8px 10px; cursor: pointer; background: #fff; }
+      #status { margin-top: 8px; font-size: 12px; color: #4b5563; }
+    </style>
+  </head>
+  <body>
+    <h1>Freshdesk AI Assistant</h1>
+    <p>Open any Freshdesk ticket to view conversation analysis, article references, and AI-powered resolution suggestions.</p>
+    <div class="actions">
+      <button id="open-options">Settings</button>
+      <button id="open-ticket">Analyze Current Ticket</button>
+    </div>
+    <div id="status"></div>
+    <script src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Freshdesk AI Assistant Settings</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 24px; max-width: 720px; color: #111827; }
+      h1 { margin-top: 0; }
+      .field { margin-bottom: 14px; }
+      label { display: block; font-weight: bold; margin-bottom: 6px; font-size: 14px; }
+      input { width: 100%; box-sizing: border-box; padding: 8px; border: 1px solid #cbd5e1; border-radius: 6px; }
+      button { border: 1px solid #cbd5e1; border-radius: 6px; padding: 10px 14px; background: #fff; cursor: pointer; }
+      #status { margin-top: 10px; font-size: 13px; color: #374151; }
+      .hint { font-size: 12px; color: #6b7280; margin-top: 3px; }
+    </style>
+  </head>
+  <body>
+    <h1>Freshdesk AI Assistant Settings</h1>
+    <div class="field">
+      <label for="freshdesk-domain">Freshdesk domain</label>
+      <input id="freshdesk-domain" placeholder="yourcompany.freshdesk.com" />
+      <div class="hint">Use your Freshdesk account domain only (no path).</div>
+    </div>
+    <div class="field">
+      <label for="freshdesk-api-key">Freshdesk API key</label>
+      <input id="freshdesk-api-key" type="password" placeholder="Freshdesk API key" />
+    </div>
+    <div class="field">
+      <label for="anthropic-api-key">Claude (Anthropic) API key</label>
+      <input id="anthropic-api-key" type="password" placeholder="Anthropic API key" />
+    </div>
+    <div class="field">
+      <label for="anthropic-model">Claude model</label>
+      <input id="anthropic-model" placeholder="claude-3-5-sonnet-latest" />
+    </div>
+    <button id="save">Save settings</button>
+    <div id="status"></div>
+    <script src="options.js"></script>
+  </body>
+</html>
